@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--I know it says dont add Header but I could not make my site look even close to what I wanted without adding the bare minimum-->
+        <!--Cameron Howard / Creating HTML website / 2-26-2025-->
+        <title>NFL Team Selector</title>
+        <meta charset="utf-8">
+        <style>
+            .slideshow-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 500px;
+                position: relative; 
+                overflow: hidden;
+                margin: 0 auto;
+                border: 5px solid black; 
+            }
+            .image-slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .image-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .active {
+                opacity: 1;
+            }
+            .button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="background-color: gray; border: 5px solid black; padding: 8px; text-align: center;">
+            <img src="logo.png" alt="site logo" style="height: 50px; width: 50px; vertical-align: middle; float: left;">
+            <h1 style="display: inline-block; vertical-align: middle; text-align: center"> The NFL Team Selector</h1>
+            <nav style="background-color: lightgray; border: 3px solid black;">
+                <ul style="list-style: none; padding: 0; margin: 10px auto; display: flex; justify-content: center;">
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="index.html">Opening Page</a>
+                    </li>
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="home.html">Home Page</a>
+                    </li>
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="form.html">Make Your Pick Page</a>
+                    </li>
+                </ul>
+              
+            </nav>
+        </header>
+        
+        <main>
+            <div>
+                <h2 style="text-align: center;"><u>Ready to find your team?</u></h2>
+            </div>
+            <div class="slideshow-container">
+                <div class="image-slide active" id="slide1"><img src="image1.jfif" alt="JJetas"></div>
+                <div class="image-slide" id="slide2"><img src="image2.webp" alt="Dak"></div>
+                <div class="image-slide" id="slide3"><img src="image3.webp" alt="amon-ra"></div>
+                <div class="image-slide" id="slide4"><img src="image4.jpg" alt="josh snow"></div>
+                <div class="image-slide" id="slide5"><img src="image5.webp" alt="lamar"></div>
+            </div>
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.image-slide');
+                const totalSlides = slides.length;
+        
+                function showSlide() {
+                    slides.forEach((slide, index) => {
+                        slide.classList.remove('active'); // Remove active class
+                        if (index === currentSlide) {
+                            slide.classList.add('active'); // Add active class to current slide
+                        }
+                    });
+                }
+        
+                // Change slide every 3 seconds
+                setInterval(() => {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    showSlide();
+                }, 3000);
+        
+                // Initial setup
+                showSlide();
+            </script>
+
+            <div class="button-container">
+                <button onclick="window.location.href='home.html';" style="padding: 10px 20px; border: 3px solid black;">Go to Next Page</button>
+            </div>
+
+            <div>
+                <h3 style="text-align: center">Our Goal</h3>
+                <p style="text-align: center; "><i>Our Goal is to help new and international fans understand the NFL, its teams, and the culture of
+                    American football. Whether you're just discovering the league or looking for the perfect team to
+                    support, we provide easy-to-follow guides, team breakdowns, and fun facts to match you with
+                    your ideal franchise. Football is for everyone, and we’re here to make the NFL more accessible,
+                    inclusive, and exciting for fans worldwide. Let’s find your team and get you game-day ready</i></p>
+            </div>
+
+        </main>
+        <footer style="background-color: gray; border: 5px solid black">
+            <p style="display: inline-block"><strong>Contact Us: </strong></p>
+            <img src="instalogo.png" alt="insta" style="display: inline-block; height: 30px; width: 30px;">
+            <img src="facebooklogo.png" alt="facebook" style="display: inline-block; height: 30px; width: 30px;">
+        </footer>
+        
+    </body>
+</html>

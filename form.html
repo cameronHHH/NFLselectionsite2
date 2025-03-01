@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--I know it says dont add Header but I could not make my site look even close to what I wanted without adding the bare minimum-->
+        <!--Cameron Howard / Creating HTML website / 2-26-2025-->
+        <title>NFL Team Selector</title>
+        <meta charset="utf-8">
+        <style>
+             body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        select, input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            width: auto;
+            margin-right: 20px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: gray; border: 5px solid black; padding: 8px; text-align: center;">
+            <img src="logo.png" alt="site logo" style="height: 50px; width: 50px; vertical-align: middle; float: left;">
+            <h1 style="display: inline-block; vertical-align: middle; text-align: center"> Home Page</h1>
+            <nav style="background-color: lightgray; border: 3px solid black;">
+                <ul style="list-style: none; padding: 0; margin: 10px auto; display: flex; justify-content: center;">
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="index.html">Opening Page</a>
+                    </li>
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="home.html">Home Page</a>
+                    </li>
+                    <li style="margin: 0 15px; display: inline;">
+                        <a href="form.html">Make Your Pick Page</a>
+                    </li>
+                </ul>
+              
+            </nav>
+        </header>
+    <main>
+        <div class="container">
+            <h1>Team Selection Form</h1>
+            
+            <form action="#" method="post">
+                <!-- Date and Team Selection -->
+                <div>
+                    <label for="date">Select a Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="team">Choose Your Team:</label>
+                    <select id="team" name="team" required>
+                        <option value="">Select a Team</option>
+                        <option value="Team1">Detroit Lions</option>
+                        <option value="Team2">Chicago Bears</option>
+                        <option value="Team3">Dallas Cowboys</option>
+                        <option value="Team4">Seattle Seahawks</option>
+                        <option value="Team5">Green Bay Packers</option>
+                        <!-- will add the rest to the final -->
+                    </select>
+                </div>
+    
+                
+                <div class="checkbox-group">
+                    <label>Select All that Apply:</label>
+                    <label><input type="checkbox" name="option1"> Team Logo/ Color</label>
+                    <label><input type="checkbox" name="option2"> Team Success</label>
+                    <label><input type="checkbox" name="option3"> Team Players</label>
+                    <label><input type="checkbox" name="option4"> Teams Culture</label>
+                    <label><input type="checkbox" name="option5"> Personal Connection</label>
+                    <label><input type="checkbox" name="option6"> Teams Future</label>
+                    <label><input type="checkbox" name="option7"> Teams Fans Base</label>
+                    <label><input type="checkbox" name="option8"> Other Reasoning</label>
+                </div>
+    
+                <!-- Comments Section -->
+                <div>
+                    <label for="comments">Leave a Comment:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </main>
+
+
+    <footer style="background-color: gray; border: 5px solid black">
+        <p style="display: inline-block"><strong>Contact Us: </strong></p>
+        <img src="instalogo.png" alt="insta" style="display: inline-block; height: 30px; width: 30px;">
+        <img src="facebooklogo.png" alt="facebook" style="display: inline-block; height: 30px; width: 30px;">
+    </footer>
+</body>
+</html>
