@@ -1,72 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!--I know it says dont add Header but I could not make my site look even close to what I wanted without adding the bare minimum-->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LEB1JPXK4"></script>
+        <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6LEB1JPXK4');
+        </script>
+
         <!--Cameron Howard / Creating HTML website / 2-26-2025-->
         <title>NFL Team Selector</title>
         <meta charset="utf-8">
-        <style>
-            .slideshow-container {
-                width: 80%;
-                max-width: 1000px;
-                height: 500px;
-                position: relative; 
-                overflow: hidden;
-                margin: 0 auto;
-                border: 5px solid black; 
-            }
-            .image-slide {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: opacity 1s ease-in-out;
-            }
+        <meta name="description" content="Looking to select your first NFL team? Explore detailed information about all NFL teams, their history, key players, and more to help you make your decision.">
+        <meta name="keywords" content="select NFL team, choosing NFL team, NFL teams, NFL history, NFL teams overview, best NFL teams, NFL fans, sports fans">
+        <meta name="author" content="NFL team Selector">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            .image-slide img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .active {
-                opacity: 1;
-            }
-            .button-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        </style>
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
 
     <body>
-        <header style="background-color: gray; border: 5px solid black; padding: 8px; text-align: center;">
-            <img src="logo.png" alt="site logo" style="height: 50px; width: 50px; vertical-align: middle; float: left;">
-            <h1 style="display: inline-block; vertical-align: middle; text-align: center"> The NFL Team Selector</h1>
-            <nav style="background-color: lightgray; border: 3px solid black;">
-                <ul style="list-style: none; padding: 0; margin: 10px auto; display: flex; justify-content: center;">
-                    <li style="margin: 0 15px; display: inline;">
-                        <a href="index.html">Opening Page</a>
-                    </li>
-                    <li style="margin: 0 15px; display: inline;">
-                        <a href="home.html">Home Page</a>
-                    </li>
-                    <li style="margin: 0 15px; display: inline;">
-                        <a href="form.html">Make Your Pick Page</a>
-                    </li>
+        <header>
+            <img src="logo.png" alt="site logo">
+            <h1>The NFL Team Selector</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Opening Page</a></li>
+                    <li><a href="home.html">Home Page</a></li>
+                    <li><a href="form.html">Make Your Pick Page</a></li>
+                    <li><a href="NFLteams.html">Teams Page</a></li>
+                    <li><a href="NFLbreakdown.html">Breakdown Page</a></li>
                 </ul>
-              
             </nav>
         </header>
         
         <main>
             <div>
-                <h2 style="text-align: center;"><u>Ready to find your team?</u></h2>
+                <h2><u>Ready to find your team?</u></h2>
             </div>
             <div class="slideshow-container">
                 <div class="image-slide active" id="slide1"><img src="image1.jfif" alt="JJetas"></div>
@@ -100,23 +73,23 @@
             </script>
 
             <div class="button-container">
-                <button onclick="window.location.href='home.html';" style="padding: 10px 20px; border: 3px solid black;">Go to Next Page</button>
+                <button onclick="window.location.href='home.html';">Go to Next Page</button>
             </div>
 
             <div>
-                <h3 style="text-align: center">Our Goal</h3>
-                <p style="text-align: center; "><i>Our Goal is to help new and international fans understand the NFL, its teams, and the culture of
+                <h3>Our Goal</h3>
+                <p>Our Goal is to help new and international fans understand the NFL, its teams, and the culture of
                     American football. Whether you're just discovering the league or looking for the perfect team to
                     support, we provide easy-to-follow guides, team breakdowns, and fun facts to match you with
                     your ideal franchise. Football is for everyone, and we’re here to make the NFL more accessible,
-                    inclusive, and exciting for fans worldwide. Let’s find your team and get you game-day ready</i></p>
+                    inclusive, and exciting for fans worldwide. Let’s find your team and get you game-day ready</p>
             </div>
-
         </main>
-        <footer style="background-color: gray; border: 5px solid black">
-            <p style="display: inline-block"><strong>Contact Us: </strong></p>
-            <img src="instalogo.png" alt="insta" style="display: inline-block; height: 30px; width: 30px;">
-            <img src="facebooklogo.png" alt="facebook" style="display: inline-block; height: 30px; width: 30px;">
+
+        <footer>
+            <p><strong>Contact Us: </strong></p>
+            <img src="instalogo.png" alt="insta">
+            <img src="facebooklogo.png" alt="facebook">
         </footer>
         
     </body>
